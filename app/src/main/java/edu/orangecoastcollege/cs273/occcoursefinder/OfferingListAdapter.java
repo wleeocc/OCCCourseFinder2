@@ -64,11 +64,14 @@ public class OfferingListAdapter extends ArrayAdapter<Offering> {
                 (TextView) view.findViewById(R.id.offeringListTitleTextView);
 
         //TODO:  Make a reference to the offeringListCRNTextView and set the text accordingly.
+        TextView offeringListCRNTextView = (TextView) view.findViewById(R.id.offeringListCRNTextView); ////
 
         offeringListLinearLayout.setTag(selectedOffering);
 
         offeringListFullNameTextView.setText(selectedCourse.getFullName() + ": " + selectedCourse.getTitle());
         offeringListTitleTextView.setText(selectedInstructor.getFullName());
+
+        offeringListCRNTextView.setText(String.valueOf(selectedOffering.getCRN())); ////////// int == primitive, String.valueOf()
 
         return view;
     }
